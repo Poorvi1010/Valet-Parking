@@ -50,8 +50,8 @@ function my_keydown(e)
 	
 		if(keyPressed == '40')
 		{
-			down();
 			console.log("down");
+			Down();
 		}
 		
 		if(keyPressed == '37')
@@ -66,42 +66,40 @@ function my_keydown(e)
 			console.log("right");
 		}
 		
-		
+			
 }
-
-function up()
+function right()
 {
-	function Up(){
-		if(greencar_y>=0){
-		greencar_y-=10;
+	if(greencar_x<=600){
+		greencar_x+=10;
 		uploadBackground();
 		uploadgreencar();
 		}
-}
-
-function down()
-{
-	if(rover_y<=500){
-        rover_y+=10;
-        uploadBackground();
-    uploadgreencar();
-    }
-}
+	}
 
 function left()
 {
-	if(rover_y<=500){
-        rover_y+=10;
+	if(greencar_x>=0){
+        greencar_x-=10;
         uploadBackground();
     uploadgreencar();
     }
 }
-
-function right()
+function Down()
 {
-	if(greencar_x>=0){
-		greencar_x-=10;
+	if(greencar_y<=500){
+        greencar_y+=10;
+        uploadBackground();
+    uploadgreencar();
+    }
+}
+function up()
+{
+	
+		if(greencar_y>=0){
+		greencar_y=greencar_y-10;
 		uploadBackground();
 		uploadgreencar();
-		}
+		
+}
 }
